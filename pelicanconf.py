@@ -25,8 +25,9 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = [
-    #('Pelican', 'http://getpelican.com/'),
-    #('Python.org', 'http://python.org/'),
+    ('XKCD', 'http://xkcd.com'),
+    ('Esoteric languages', 'http://esolangs.org/wiki/Main_Page'),
+    ('Destroy all software', 'https://www.destroyallsoftware.com/screencasts'),
 ]
 
 # Social widget
