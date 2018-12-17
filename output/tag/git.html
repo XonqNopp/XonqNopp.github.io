@@ -24,6 +24,10 @@
         <abbr class="published" title="2018-12-10T14:34:00+01:00">
                 Published: Mon 10 December 2018
         </abbr>
+		<br />
+        <abbr class="modified" title="2018-12-17T14:23:00+01:00">
+                Updated: Mon 17 December 2018
+        </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/output/author/xonqnopp.html">XonqNopp</a>
@@ -46,14 +50,19 @@ For repositories with more than one developer, I advise to use sub.</p>
 <p>You only need to take special action the first time.
 I wrote a script for this here:
 <a class="reference external" href="https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-init">https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-init</a>
-This script is only needed the first time:</p>
+This script is only needed the first time.</p>
+<ul>
+<li><p class="first">To introduce a new sub, the following command wil clone the repo and stage all files for commit:</p>
 <pre class="literal-block">
 git sub-init my/sub/path/in/repo https://github.com/awesome/repo
 </pre>
-<ul class="simple">
-<li>If you are introducing a new sub, it will clone the repo and stage all files for commit.</li>
-<li>If you pulled from the repo and new commits introduce a sub, it will add the .git directory in the sub
-so you can easily change branch, commit or anything.</li>
+</li>
+<li><p class="first">If you pulled from the repo and new commits introduce a sub, running the following command will add the .git
+directory in the sub so you can easily change branch, commit or anything:</p>
+<pre class="literal-block">
+git sub-init my/sub/path/in/repo
+</pre>
+</li>
 </ul>
 <p>Later on, you can also check if there are uncommitted changes with this script:
 <a class="reference external" href="https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-st">https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-st</a></p>

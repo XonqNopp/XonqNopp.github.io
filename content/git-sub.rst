@@ -3,6 +3,7 @@ git sub
 
 :title:    git sub
 :date:     2018-12-10 14:34
+:modified: 2018-12-17 14:23
 :category: git
 :tags:     git
 
@@ -25,13 +26,16 @@ For repositories with more than one developer, I advise to use sub.
 You only need to take special action the first time.
 I wrote a script for this here:
 https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-init
-This script is only needed the first time::
+This script is only needed the first time.
 
-   git sub-init my/sub/path/in/repo https://github.com/awesome/repo
+* To introduce a new sub, the following command wil clone the repo and stage all files for commit::
 
-* If you are introducing a new sub, it will clone the repo and stage all files for commit.
-* If you pulled from the repo and new commits introduce a sub, it will add the .git directory in the sub
-  so you can easily change branch, commit or anything.
+     git sub-init my/sub/path/in/repo https://github.com/awesome/repo
+
+* If you pulled from the repo and new commits introduce a sub, running the following command will add the .git
+  directory in the sub so you can easily change branch, commit or anything::
+
+     git sub-init my/sub/path/in/repo
 
 Later on, you can also check if there are uncommitted changes with this script:
 https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-st
