@@ -3,7 +3,7 @@ git sub
 
 :title:    git sub
 :date:     2018-12-10 14:34
-:modified: 2018-12-17 14:23
+:modified: 2018-12-17 16:43
 :category: git
 :tags:     git
 
@@ -23,22 +23,21 @@ So I have come to think that sticking to the basics is maybe better.
 It is simply a clone of the other repo into the main repo and we track all files in the main repo as well.
 For repositories with more than one developer, I advise to use sub.
 
-You only need to take special action the first time.
 I wrote a script for this here:
-https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-init
-This script is only needed the first time.
+https://github.com/XonqNopp/git-sub
 
-* To introduce a new sub, the following command wil clone the repo and stage all files for commit::
+* To introduce a new sub, the following command will clone the repo and stage all files for commit::
 
-     git sub-init my/sub/path/in/repo https://github.com/awesome/repo
+     git sub init my/sub/path/in/repo https://github.com/awesome/repo [branch_name_or_whatever_git_ref]
 
 * If you pulled from the repo and new commits introduce a sub, running the following command will add the .git
   directory in the sub so you can easily change branch, commit or anything::
 
-     git sub-init my/sub/path/in/repo
+     git sub init my/sub/path/in/repo
 
-Later on, you can also check if there are uncommitted changes with this script:
-https://github.com/XonqNopp/conf/blob/master/git/bin/git-sub-st
+Later on, you can also check if there are uncommitted changes with::
+
+   git sub st
 
 
 Pros
@@ -60,5 +59,5 @@ HowTo advice
 * when changes are required in sub, cd there, do the changes, commit, push, and when state is clean (as opposed to
   submodule dirty status), cd back to main repo and commit.
   This way you ensure you use only versions of the sub which are available in the remote.
-  To be sure to have everything synchronized on both repos, you can use ``git sub-st`` (see above).
+  To be sure to have everything synchronized on both repos, you can use ``git sub st`` (see above).
 
